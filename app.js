@@ -26,7 +26,7 @@ const distributors = [
   'JOFISA',
   'DISTRIOR COMERCIAL',
   'DIFAMER JOSE',
-  'PRISMA'
+  'PRISMA',
 ]
 const Products = [
   { id: 1, name: 'MOZZARELLA PIZZA', distributor: 'FERNANDO MARNOVA' },
@@ -306,7 +306,7 @@ const Products = [
   { id: 275, name: 'ZUMO MELOCOTÓN', distributor: 'DISTRIOR COMERCIAL' },
   { id: 276, name: 'ZUMO PIÑA', distributor: 'DISTRIOR COMERCIAL' },
   { id: 277, name: 'PAPEL FIELD', distributor: 'JOFISAL' },
-  { id: 278, name: 'FINCA LAVANDEIRA', distributor: 'DIFAMER' },
+  { id: 278, name: 'FINCA LAVANDEIRA', distributor: 'DIFAMER JOSE' },
   { id: 279, name: 'ACEITE FREIDORA', distributor: 'ACEITUNERO' },
   { id: 280, name: 'TORTILLAS TRIGO 25CM', distributor: 'PRISMA' },
   { id: 281, name: 'TORTILLAS TRIGO 12CM', distributor: 'PRISMA' },
@@ -316,7 +316,9 @@ const Products = [
   { id: 285, name: 'FRIJOLES ENTEROS LATA', distributor: 'PRISMA' },
 ]
 
+
 let distributorABC = [...distributors.sort()]
+
 showBtnDistributors(distributorABC)
 const btnDistributors = getElementsWithClassname('distributor')
 insertEventOnButtons(btnDistributors)
@@ -348,8 +350,6 @@ function insertEventOnButtons (buttons) {
     })
   }
 }
-
-
 
 function insertModalDistributor (distributor) {
 
@@ -418,7 +418,6 @@ function showMessage (productList) {
     container.classList.remove('active')
   }
 }
-
 
 function convertObjInString (obj) {
   if (Object.keys(obj).length <= 0) return
